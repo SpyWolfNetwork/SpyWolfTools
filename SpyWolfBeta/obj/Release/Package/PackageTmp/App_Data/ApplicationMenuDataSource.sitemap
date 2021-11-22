@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="javascript:void(0);">
+    <siteMapNode url="Default.aspx" title="Home"></siteMapNode>
+    <siteMapNode url="Article.aspx" title="Article"></siteMapNode>
+    <siteMapNode title="Dashboards">
+      <siteMapNode url="BetaDashboard/PotentialScams.aspx" title="Potential Scams"></siteMapNode>
+      <siteMapNode url="BetaDashboard/DividendTracker.aspx" title="Dividend Tracker"></siteMapNode>
+      <!--<siteMapNode url="BetaDashboard/MigrationDashboard.aspx" title="Migration Wallet"></siteMapNode>-->
+      <siteMapNode url="BetaDashboard/BetaDashboard.aspx" title="Track Wallet"></siteMapNode>
+      <siteMapNode url="Scheduler.aspx" title="Vetter"></siteMapNode>
+      <siteMapNode url="BetaDashboard/ApeSpyDashboard.aspx" title="Ape Spy Dashboard"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Spywolf Team">
+      <siteMapNode url="SpywolfTeam/AdminPotentialScams.aspx" title="Potential Scams Administration"></siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

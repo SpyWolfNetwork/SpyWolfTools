@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27B2EDC7-C645-4787-99FA-3CA5F6DDF5EE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpyWolfBeta</RootNamespace>
+    <AssemblyName>SpyWolfBeta</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Web.Resources.v19.2, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FusionCharts">
+      <HintPath>C:\Users\jefbu\Downloads\FusionCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v19.2, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v19.2, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v19.2, Version=19.2.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\SignIn.aspx" />
+    <Content Include="App_Data\Article.html" />
+    <Content Include="App_Data\ArticleContents.xml" />
+    <Content Include="App_Data\Overview.html" />
+    <Content Include="App_Data\OverviewContents.xml" />
+    <Content Include="Article.aspx" />
+    <Content Include="BetaDashboard\ApeSpyDashboard.aspx" />
+    <Content Include="BetaDashboard\BetaDashboard.aspx" />
+    <Content Include="BetaDashboard\DividendTracker.aspx" />
+    <Content Include="BetaDashboard\MigrationDashboard.aspx" />
+    <Content Include="BetaDashboard\PotentialScams.aspx" />
+    <Content Include="BetaDashboard\WalletInfo.aspx" />
+    <Content Include="ChartPopUp.aspx" />
+    <Content Include="Content\Content.css" />
+    <Content Include="Content\fusioncharts.charts.js" />
+    <Content Include="Content\fusioncharts.js" />
+    <Content Include="Content\fusioncharts.theme.candy.js" />
+    <Content Include="Content\GridView.css" />
+    <Content Include="Content\GridView.js" />
+    <Content Include="Content\Images\adaptive-menu.svg" />
+    <Content Include="Content\Images\add.svg" />
+    <Content Include="Content\Images\application.svg" />
+    <Content Include="Content\Images\Article-white.svg" />
+    <Content Include="Content\Images\Article.svg" />
+    <Content Include="Content\Images\back.svg" />
+    <Content Include="Content\Images\delete.svg" />
+    <Content Include="Content\Images\double-close.svg" />
+    <Content Include="Content\Images\double.svg" />
+    <Content Include="Content\Images\edit.svg" />
+    <Content Include="Content\Images\export.svg" />
+    <Content Include="Content\Images\eye-button-hide.svg" />
+    <Content Include="Content\Images\eye-button.svg" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\GridView-white.svg" />
+    <Content Include="Content\Images\GridView.svg" />
+    <Content Include="Content\Images\Home-white.svg" />
+    <Content Include="Content\Images\Home.svg" />
+    <Content Include="Content\Images\image-sample.png" />
+    <Content Include="Content\Images\kind1-white.svg" />
+    <Content Include="Content\Images\kind1.svg" />
+    <Content Include="Content\Images\kind2-white.svg" />
+    <Content Include="Content\Images\kind2.svg" />
+    <Content Include="Content\Images\logo-small.svg" />
+    <Content Include="Content\Images\logo.svg" />
+    <Content Include="Content\Images\menu.svg" />
+    <Content Include="Content\Images\Overview\article.png" />
+    <Content Include="Content\Images\Overview\demo.png" />
+    <Content Include="Content\Images\Overview\grid.png" />
+    <Content Include="Content\Images\Overview\login.gif" />
+    <Content Include="Content\Images\Overview\login.png" />
+    <Content Include="Content\Images\Overview\menu.gif" />
+    <Content Include="Content\Images\Overview\scheduler.png" />
+    <Content Include="Content\Images\Overview\sidebar.gif" />
+    <Content Include="Content\Images\Overview\sticky-footer.gif" />
+    <Content Include="Content\Images\Overview\toolbar.gif" />
+    <Content Include="Content\Images\print.svg" />
+    <Content Include="Content\Images\priority1-white.svg" />
+    <Content Include="Content\Images\priority1.svg" />
+    <Content Include="Content\Images\priority2-white.svg" />
+    <Content Include="Content\Images\priority2.svg" />
+    <Content Include="Content\Images\priority3-white.svg" />
+    <Content Include="Content\Images\priority3.svg" />
+    <Content Include="Content\Images\RedFlag1.png" />
+    <Content Include="Content\Images\RedFlag2.png" />
+    <Content Include="Content\Images\RedFlag3.png" />
+    <Content Include="Content\Images\RedFlag4.png" />
+    <Content Include="Content\Images\RedFlag5.png" />
+    <Content Include="Content\Images\RedFlag6.png" />
+    <Content Include="Content\Images\Scheduler-white.svg" />
+    <Content Include="Content\Images\Scheduler.svg" />
+    <Content Include="Content\Images\search-selected.svg" />
+    <Content Include="Content\Images\search.svg" />
+    <Content Include="Content\Images\Ship.jpg" />
+    <Content Include="Content\Images\sign-out.svg" />
+    <Content Include="Content\Images\SpyWolf-logo.svg" />
+    <Content Include="Content\Images\SpywolfServices.jpg" />
+    <Content Include="Content\Images\SpywolfServices.png" />
+    <Content Include="Content\Images\telegram.png" />
+    <Content Include="Content\Images\twitter.png" />
+    <Content Include="Content\Images\user.svg" />
+    <Content Include="Content\Images\web.png" />
+    <Content Include="Content\Layout.css" />
+    <Content Include="Content\Photo\Alberto_Alonso.jpg" />
+    <Content Include="Content\Photo\Alfredo_Gomez.jpg" />
+    <Content Include="Content\Photo\Andrew_Lee.jpg" />
+    <Content Include="Content\Photo\Angela_Murphy.jpg" />
+    <Content Include="Content\Photo\Clarence_Nath.jpg" />
+    <Content Include="Content\Photo\Colin_He.jpg" />
+    <Content Include="Content\Photo\Connor_Jenkins.jpg" />
+    <Content Include="Content\Photo\Connor_Lopez.jpg" />
+    <Content Include="Content\Photo\Destiny_Clark.jpg" />
+    <Content Include="Content\Photo\Diana_Martin.jpg" />
+    <Content Include="Content\Photo\Gary_Rubio.jpg" />
+    <Content Include="Content\Photo\Heidi_Lopez.jpg" />
+    <Content Include="Content\Photo\Jesse_Gonzalez.jpg" />
+    <Content Include="Content\Photo\Jessie_She.jpg" />
+    <Content Include="Content\Photo\Julia_Bell.jpg" />
+    <Content Include="Content\Photo\Julia_Evans.jpg" />
+    <Content Include="Content\Photo\Katelyn_Lopez.jpg" />
+    <Content Include="Content\Photo\Kevin_Collins.jpg" />
+    <Content Include="Content\Photo\Logan_Hernandez.jpg" />
+    <Content Include="Content\Photo\Maria_Hernandez.jpg" />
+    <Content Include="Content\Photo\Martha_Gao.jpg" />
+    <Content Include="Content\Photo\Megan_Sanchez.jpg" />
+    <Content Include="Content\Photo\Miguel_Jones.jpg" />
+    <Content Include="Content\Photo\Naomi_Moreno.jpg" />
+    <Content Include="Content\Photo\Nathan_Bryant.jpg" />
+    <Content Include="Content\Photo\Rafael_Raje.jpg" />
+    <Content Include="Content\Photo\Rebekah_Raman.jpg" />
+    <Content Include="Content\Photo\Shannon_Sanz.jpg" />
+    <Content Include="Content\Photo\User.png" />
+    <Content Include="Content\Photo\Xavier_Richardson.jpg" />
+    <Content Include="Content\Scheduler.css" />
+    <Content Include="Content\Scheduler.js" />
+    <Content Include="Content\Script.js" />
+    <Content Include="Content\SignInRegister.css" />
+    <Content Include="Content\SignInRegister.js" />
+    <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="GridView.aspx" />
+    <Content Include="GridViewDetailsPage.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Home.html" />
+    <Content Include="HomeFiles\all.min.css" />
+    <Content Include="HomeFiles\animate.min.css" />
+    <Content Include="HomeFiles\dashboard-coming-soon-lowres.png" />
+    <Content Include="HomeFiles\Favicon2.png" />
+    <Content Include="HomeFiles\style.css" />
+    <Content Include="icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="icons\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="icons\line-awesome\css\line-awesome.css" />
+    <Content Include="icons\line-awesome\css\line-awesome.min.css" />
+    <Content Include="icons\line-awesome\fonts\la-brands-400.svg" />
+    <Content Include="icons\line-awesome\fonts\la-regular-400.svg" />
+    <Content Include="icons\line-awesome\fonts\la-solid-900.svg" />
+    <Content Include="icons\line-awesome\fonts\line-awesome.svg" />
+    <Content Include="icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="images\android-chrome-192x192.png" />
+    <Content Include="images\android-chrome-512x512.png" />
+    <Content Include="images\android.svg" />
+    <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\apple.svg" />
+    <Content Include="images\favicon-16x16.png" />
+    <Content Include="images\favicon-32x32.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\spywolf-icon.svg" />
+    <Content Include="images\SpyWolf-Logo-Light.svg" />
+    <Content Include="images\Spywolf-Profile.png" />
+    <Content Include="images\spywolf_tools_logo.svg" />
+    <Content Include="images\spywolf_tools_logo_light.svg" />
+    <Content Include="js\apexchart2-init.js" />
+    <Content Include="js\apexcharts.min.js" />
+    <Content Include="js\plugins\jquery-ui-init.js" />
+    <Content Include="js\plugins\owl-carousel-init.js" />
+    <Content Include="js\plugins\scrollit-init.js" />
+    <Content Include="js\plugins\sparkline-init.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="Rewards.aspx" />
+    <Content Include="Scheduler.aspx" />
+    <Content Include="TokenScanner.aspx" />
+    <Content Include="vendor\apexchart\apexchart-init.js" />
+    <Content Include="vendor\apexchart\apexchart2-init.js" />
+    <Content Include="vendor\apexchart\apexcharts.min.js" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\circle-progress\circle-progress-init.js" />
+    <Content Include="vendor\circle-progress\circle-progress.min.js" />
+    <Content Include="vendor\jquery-sparkline\jquery.sparkline.min.js" />
+    <Content Include="vendor\jquery-ui\jquery-ui.min.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\scrollit\scrollIt.js" />
+    <Content Include="vendor\toastr\toastr-init.js" />
+    <Content Include="vendor\toastr\toastr.min.css" />
+    <Content Include="vendor\toastr\toastr.min.js" />
+    <Content Include="__MACOSX\._index.html" />
+    <Content Include="__MACOSX\._rewards.html" />
+    <Content Include="__MACOSX\._token-scanner.html" />
+    <Content Include="__MACOSX\css\._style.css" />
+    <Content Include="__MACOSX\icons\font-awesome\css\._font-awesome.min.css" />
+    <Content Include="__MACOSX\icons\font-awesome\fonts\._fontawesome-webfont3e6e.svg" />
+    <Content Include="__MACOSX\icons\line-awesome\css\._line-awesome.css" />
+    <Content Include="__MACOSX\icons\line-awesome\css\._line-awesome.min.css" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-brands-400.svg" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-regular-400.svg" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-solid-900.svg" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._line-awesome.svg" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\css\._materialdesignicons.min.css" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\fonts\._materialdesignicons-webfont.svg" />
+    <Content Include="__MACOSX\images\._android-chrome-192x192.png" />
+    <Content Include="__MACOSX\images\._android-chrome-512x512.png" />
+    <Content Include="__MACOSX\images\._android.svg" />
+    <Content Include="__MACOSX\images\._apple-touch-icon.png" />
+    <Content Include="__MACOSX\images\._apple.svg" />
+    <Content Include="__MACOSX\images\._favicon-16x16.png" />
+    <Content Include="__MACOSX\images\._favicon-32x32.png" />
+    <Content Include="__MACOSX\images\._favicon.ico" />
+    <Content Include="__MACOSX\images\._spywolf-icon.svg" />
+    <Content Include="__MACOSX\images\._SpyWolf-Logo-Light.svg" />
+    <Content Include="__MACOSX\images\._Spywolf-Profile.png" />
+    <Content Include="__MACOSX\js\._apexchart2-init.js" />
+    <Content Include="__MACOSX\js\._apexcharts.min.js" />
+    <Content Include="__MACOSX\js\._scripts.js" />
+    <Content Include="__MACOSX\js\plugins\._jquery-ui-init.js" />
+    <Content Include="__MACOSX\js\plugins\._owl-carousel-init.js" />
+    <Content Include="__MACOSX\js\plugins\._scrollit-init.js" />
+    <Content Include="__MACOSX\js\plugins\._sparkline-init.js" />
+    <Content Include="__MACOSX\vendor\apexchart\._apexchart-init.js" />
+    <Content Include="__MACOSX\vendor\apexchart\._apexchart2-init.js" />
+    <Content Include="__MACOSX\vendor\apexchart\._apexcharts.min.js" />
+    <Content Include="__MACOSX\vendor\bootstrap\css\._bootstrap.min.css" />
+    <Content Include="__MACOSX\vendor\bootstrap\js\._bootstrap.bundle.min.js" />
+    <Content Include="__MACOSX\vendor\circle-progress\._circle-progress-init.js" />
+    <Content Include="__MACOSX\vendor\circle-progress\._circle-progress.min.js" />
+    <Content Include="__MACOSX\vendor\jquery-sparkline\._jquery.sparkline.min.js" />
+    <Content Include="__MACOSX\vendor\jquery-ui\._jquery-ui.min.js" />
+    <Content Include="__MACOSX\vendor\jquery\._jquery.min.js" />
+    <Content Include="__MACOSX\vendor\scrollit\._scrollIt.js" />
+    <Content Include="__MACOSX\vendor\toastr\._toastr-init.js" />
+    <Content Include="__MACOSX\vendor\toastr\._toastr.min.css" />
+    <Content Include="__MACOSX\vendor\toastr\._toastr.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Root.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ApplicationMenuDataSource.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SpywolfTeam\AdminPotentialScams.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="HomeFiles\css" />
+    <Content Include="css\style.css.map" />
+    <Content Include="fonts\CircularStd-Black.otf" />
+    <Content Include="fonts\CircularStd-BlackItalic.otf" />
+    <Content Include="fonts\CircularStd-Bold.otf" />
+    <Content Include="fonts\CircularStd-BoldItalic.otf" />
+    <Content Include="fonts\CircularStd-Book.otf" />
+    <Content Include="fonts\CircularStd-BookItalic.otf" />
+    <Content Include="fonts\CircularStd-Light-Italic.otf" />
+    <Content Include="fonts\CircularStd-Light.otf" />
+    <Content Include="fonts\CircularStd-Medium.otf" />
+    <Content Include="fonts\CircularStd-MediumItalic.otf" />
+    <Content Include="icons\.DS_Store" />
+    <Content Include="icons\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="icons\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="icons\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="icons\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="icons\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="icons\line-awesome\.DS_Store" />
+    <Content Include="icons\line-awesome\fonts\la-brands-400.eot" />
+    <Content Include="icons\line-awesome\fonts\la-brands-400.ttf" />
+    <Content Include="icons\line-awesome\fonts\la-brands-400.woff" />
+    <Content Include="icons\line-awesome\fonts\la-brands-400.woff2" />
+    <Content Include="icons\line-awesome\fonts\la-regular-400.eot" />
+    <Content Include="icons\line-awesome\fonts\la-regular-400.ttf" />
+    <Content Include="icons\line-awesome\fonts\la-regular-400.woff" />
+    <Content Include="icons\line-awesome\fonts\la-regular-400.woff2" />
+    <Content Include="icons\line-awesome\fonts\la-solid-900.eot" />
+    <Content Include="icons\line-awesome\fonts\la-solid-900.ttf" />
+    <Content Include="icons\line-awesome\fonts\la-solid-900.woff" />
+    <Content Include="icons\line-awesome\fonts\la-solid-900.woff2" />
+    <Content Include="icons\line-awesome\fonts\line-awesome.eot" />
+    <Content Include="icons\line-awesome\fonts\line-awesome.ttf" />
+    <Content Include="icons\line-awesome\fonts\line-awesome.woff" />
+    <Content Include="icons\line-awesome\fonts\line-awesome.woff2" />
+    <Content Include="icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="images\.DS_Store" />
+    <Content Include="images\site.webmanifest" />
+    <Content Include="js\.DS_Store" />
+    <None Include="Properties\PublishProfiles\Live.pubxml" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="vendor\.DS_Store" />
+    <Content Include="vendor\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="vendor\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="vendor\bootstrap\scss\bootstrap.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="vendor\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_overflow.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_shadows.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_stretched-link.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="vendor\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="vendor\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="vendor\bootstrap\scss\_alert.scss" />
+    <Content Include="vendor\bootstrap\scss\_badge.scss" />
+    <Content Include="vendor\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="vendor\bootstrap\scss\_button-group.scss" />
+    <Content Include="vendor\bootstrap\scss\_buttons.scss" />
+    <Content Include="vendor\bootstrap\scss\_card.scss" />
+    <Content Include="vendor\bootstrap\scss\_carousel.scss" />
+    <Content Include="vendor\bootstrap\scss\_close.scss" />
+    <Content Include="vendor\bootstrap\scss\_code.scss" />
+    <Content Include="vendor\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="vendor\bootstrap\scss\_dropdown.scss" />
+    <Content Include="vendor\bootstrap\scss\_forms.scss" />
+    <Content Include="vendor\bootstrap\scss\_functions.scss" />
+    <Content Include="vendor\bootstrap\scss\_grid.scss" />
+    <Content Include="vendor\bootstrap\scss\_images.scss" />
+    <Content Include="vendor\bootstrap\scss\_input-group.scss" />
+    <Content Include="vendor\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="vendor\bootstrap\scss\_list-group.scss" />
+    <Content Include="vendor\bootstrap\scss\_media.scss" />
+    <Content Include="vendor\bootstrap\scss\_mixins.scss" />
+    <Content Include="vendor\bootstrap\scss\_modal.scss" />
+    <Content Include="vendor\bootstrap\scss\_nav.scss" />
+    <Content Include="vendor\bootstrap\scss\_navbar.scss" />
+    <Content Include="vendor\bootstrap\scss\_pagination.scss" />
+    <Content Include="vendor\bootstrap\scss\_popover.scss" />
+    <Content Include="vendor\bootstrap\scss\_print.scss" />
+    <Content Include="vendor\bootstrap\scss\_progress.scss" />
+    <Content Include="vendor\bootstrap\scss\_reboot.scss" />
+    <Content Include="vendor\bootstrap\scss\_root.scss" />
+    <Content Include="vendor\bootstrap\scss\_spinners.scss" />
+    <Content Include="vendor\bootstrap\scss\_tables.scss" />
+    <Content Include="vendor\bootstrap\scss\_toasts.scss" />
+    <Content Include="vendor\bootstrap\scss\_tooltip.scss" />
+    <Content Include="vendor\bootstrap\scss\_transitions.scss" />
+    <Content Include="vendor\bootstrap\scss\_type.scss" />
+    <Content Include="vendor\bootstrap\scss\_utilities.scss" />
+    <Content Include="vendor\bootstrap\scss\_variables.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="__MACOSX\._css" />
+    <Content Include="__MACOSX\._fonts" />
+    <Content Include="__MACOSX\._icons" />
+    <Content Include="__MACOSX\._images" />
+    <Content Include="__MACOSX\._js" />
+    <Content Include="__MACOSX\._vendor" />
+    <Content Include="__MACOSX\css\._style.css.map" />
+    <Content Include="__MACOSX\fonts\._CircularStd-Black.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-BlackItalic.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-Bold.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-BoldItalic.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-Book.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-BookItalic.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-Light-Italic.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-Light.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-Medium.otf" />
+    <Content Include="__MACOSX\fonts\._CircularStd-MediumItalic.otf" />
+    <Content Include="__MACOSX\icons\._.DS_Store" />
+    <Content Include="__MACOSX\icons\._font-awesome" />
+    <Content Include="__MACOSX\icons\._line-awesome" />
+    <Content Include="__MACOSX\icons\._material-design-iconic-font" />
+    <Content Include="__MACOSX\icons\font-awesome\._css" />
+    <Content Include="__MACOSX\icons\font-awesome\._fonts" />
+    <Content Include="__MACOSX\icons\font-awesome\fonts\._fontawesome-webfont3e6e.eot" />
+    <Content Include="__MACOSX\icons\font-awesome\fonts\._fontawesome-webfont3e6e.ttf" />
+    <Content Include="__MACOSX\icons\font-awesome\fonts\._fontawesome-webfont3e6e.woff" />
+    <Content Include="__MACOSX\icons\font-awesome\fonts\._fontawesome-webfont3e6e.woff2" />
+    <Content Include="__MACOSX\icons\font-awesome\fonts\._fontawesome-webfontd41d.eot" />
+    <Content Include="__MACOSX\icons\line-awesome\._.DS_Store" />
+    <Content Include="__MACOSX\icons\line-awesome\._css" />
+    <Content Include="__MACOSX\icons\line-awesome\._fonts" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-brands-400.eot" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-brands-400.ttf" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-brands-400.woff" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-brands-400.woff2" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-regular-400.eot" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-regular-400.ttf" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-regular-400.woff" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-regular-400.woff2" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-solid-900.eot" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-solid-900.ttf" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-solid-900.woff" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._la-solid-900.woff2" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._line-awesome.eot" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._line-awesome.ttf" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._line-awesome.woff" />
+    <Content Include="__MACOSX\icons\line-awesome\fonts\._line-awesome.woff2" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\._css" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\._fonts" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\fonts\._materialdesignicons-webfont.eot" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\fonts\._materialdesignicons-webfont.ttf" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\fonts\._materialdesignicons-webfont.woff" />
+    <Content Include="__MACOSX\icons\material-design-iconic-font\fonts\._materialdesignicons-webfont.woff2" />
+    <Content Include="__MACOSX\images\._.DS_Store" />
+    <Content Include="__MACOSX\images\._site.webmanifest" />
+    <Content Include="__MACOSX\js\._.DS_Store" />
+    <Content Include="__MACOSX\js\._plugins" />
+    <Content Include="__MACOSX\vendor\._.DS_Store" />
+    <Content Include="__MACOSX\vendor\._apexchart" />
+    <Content Include="__MACOSX\vendor\._bootstrap" />
+    <Content Include="__MACOSX\vendor\._circle-progress" />
+    <Content Include="__MACOSX\vendor\._jquery" />
+    <Content Include="__MACOSX\vendor\._jquery-sparkline" />
+    <Content Include="__MACOSX\vendor\._jquery-ui" />
+    <Content Include="__MACOSX\vendor\._scrollit" />
+    <Content Include="__MACOSX\vendor\._toastr" />
+    <Content Include="__MACOSX\vendor\bootstrap\._css" />
+    <Content Include="__MACOSX\vendor\bootstrap\._js" />
+    <Content Include="__MACOSX\vendor\bootstrap\._scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\._bootstrap-grid.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\._bootstrap-reboot.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\._bootstrap.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\._mixins" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\._utilities" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\._vendor" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__alert.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__badge.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__breadcrumb.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__button-group.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__buttons.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__card.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__carousel.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__close.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__code.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__custom-forms.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__dropdown.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__forms.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__functions.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__grid.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__images.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__input-group.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__jumbotron.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__list-group.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__media.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__mixins.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__modal.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__nav.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__navbar.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__pagination.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__popover.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__print.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__progress.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__reboot.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__root.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__spinners.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__tables.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__toasts.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__tooltip.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__transitions.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__type.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__utilities.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\.__variables.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__alert.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__background-variant.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__badge.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__border-radius.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__box-shadow.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__breakpoints.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__buttons.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__caret.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__clearfix.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__deprecate.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__float.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__forms.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__gradients.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__grid-framework.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__grid.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__hover.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__image.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__list-group.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__lists.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__nav-divider.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__pagination.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__reset-text.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__resize.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__screen-reader.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__size.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__table-row.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__text-emphasis.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__text-hide.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__text-truncate.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__transition.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\mixins\.__visibility.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__align.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__background.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__borders.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__clearfix.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__display.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__embed.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__flex.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__float.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__overflow.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__position.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__screenreaders.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__shadows.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__sizing.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__spacing.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__stretched-link.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__text.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\utilities\.__visibility.scss" />
+    <Content Include="__MACOSX\vendor\bootstrap\scss\vendor\.__rfs.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Article.aspx.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Article.aspx.designer.cs">
+      <DependentUpon>Article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetaDashboard\ApeSpyDashboard.aspx.cs">
+      <DependentUpon>ApeSpyDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetaDashboard\ApeSpyDashboard.aspx.designer.cs">
+      <DependentUpon>ApeSpyDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetaDashboard\BetaDashboard.aspx.cs">
+      <DependentUpon>BetaDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetaDashboard\BetaDashboard.aspx.designer.cs">
+      <DependentUpon>BetaDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetaDashboard\DividendTracker.aspx.cs">
+      <DependentUpon>DividendTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetaDashboard\DividendTracker.aspx.designer.cs">
+      <DependentUpon>DividendTracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetaDashboard\MigrationDashboard.aspx.cs">
+      <DependentUpon>MigrationDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetaDashboard\MigrationDashboard.aspx.designer.cs">
+      <DependentUpon>MigrationDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetaDashboard\PotentialScams.aspx.cs">
+      <DependentUpon>PotentialScams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetaDashboard\PotentialScams.aspx.designer.cs">
+      <DependentUpon>PotentialScams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetaDashboard\WalletInfo.aspx.cs">
+      <DependentUpon>WalletInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetaDashboard\WalletInfo.aspx.designer.cs">
+      <DependentUpon>WalletInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChartPopUp.aspx.cs">
+      <DependentUpon>ChartPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChartPopUp.aspx.designer.cs">
+      <DependentUpon>ChartPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\AuthHelper.cs" />
+    <Compile Include="Code\BSCLatestTx.cs" />
+    <Compile Include="Code\CMCModel.cs" />
+    <Compile Include="Code\ContractApiModel.cs" />
+    <Compile Include="Code\CryptoNewListModel.cs" />
+    <Compile Include="Code\DBContext.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GridView.aspx.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridView.aspx.designer.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDetailsPage.aspx.cs">
+      <DependentUpon>GridViewDetailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDetailsPage.aspx.designer.cs">
+      <DependentUpon>GridViewDetailsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rewards.aspx.cs">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rewards.aspx.designer.cs">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Root.master.cs">
+      <DependentUpon>Root.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root.master.designer.cs">
+      <DependentUpon>Root.master</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler.aspx.cs">
+      <DependentUpon>Scheduler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scheduler.aspx.designer.cs">
+      <DependentUpon>Scheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SpywolfTeam\AdminPotentialScams.aspx.cs">
+      <DependentUpon>AdminPotentialScams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpywolfTeam\AdminPotentialScams.aspx.designer.cs">
+      <DependentUpon>AdminPotentialScams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TokenScanner.aspx.cs">
+      <DependentUpon>TokenScanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TokenScanner.aspx.designer.cs">
+      <DependentUpon>TokenScanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1442</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1442/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="eLearningDBConnectionString1-Web.config Connection String" description="eLearningDBConnectionString1 Connection String used in web.config by the application to access the database." defaultValue="Server=.\SQLExpress;Database=eLearningDB;User ID=wendell;pwd=w3ndeLL" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\SpyWolf\\SpyWolfBeta\\SpyWolfBeta\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='eLearningDBConnectionString1']/@connectionString" />
+  </parameter>
+  <parameter name="eLearningDBConnectionString-Web.config Connection String" description="eLearningDBConnectionString Connection String used in web.config by the application to access the database." defaultValue="Server=SQL5097.site4now.net;Database=db_a7c710_spywolf;User ID=db_a7c710_spywolf_admin;pwd=wendell123" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\SpyWolf\\SpyWolfBeta\\SpyWolfBeta\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='eLearningDBConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="eLearningDBEntities-Web.config Connection String" description="eLearningDBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/eLearningDBModel.csdl|res://*/eLearningDBModel.ssdl|res://*/eLearningDBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SQL5097.site4now.net;initial catalog=db_a7c710_spywolf;User ID=db_a7c710_spywolf_admin;pwd=wendell123;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\SpyWolf\\SpyWolfBeta\\SpyWolfBeta\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='eLearningDBEntities']/@connectionString" />
+  </parameter>
+  <parameter name="eLearningDBEntities1-Web.config Connection String" description="eLearningDBEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/eLearningDBModel.csdl|res://*/eLearningDBModel.ssdl|res://*/eLearningDBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(local)\SQLEXPRESS;initial catalog=eLearningDB;User ID=wendell;pwd=w3ndeLL;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\SpyWolf\\SpyWolfBeta\\SpyWolfBeta\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='eLearningDBEntities1']/@connectionString" />
+  </parameter>
+</parameters>

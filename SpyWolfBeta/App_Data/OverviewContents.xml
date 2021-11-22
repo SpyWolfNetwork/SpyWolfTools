@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Nodes>
+  <TreeViewNode Text="SpyWolf Dashboard" NavigateUrl="#ResponsiveWebApplication">
+    <TreeViewNode Text="Connect Wallet" NavigateUrl="#navbar" />
+    <TreeViewNode Text="Balance Information" NavigateUrl="#toolbar" />
+    <TreeViewNode Text="Latest Transactions" NavigateUrl="#stickyFooter" />
+  </TreeViewNode>
+  <TreeViewNode Text="Tier Information" NavigateUrl="#content">
+    <TreeViewNode Text="New Recruit" NavigateUrl="#grid" />
+    <TreeViewNode Text="Spy Tier 1" NavigateUrl="#scheduler" />
+    <TreeViewNode Text="Spy Tier 2" NavigateUrl="#scheduler" />
+    <TreeViewNode Text="Master Spy" NavigateUrl="#article" />
+    <TreeViewNode Text="VIP I" NavigateUrl="#article" />
+    <TreeViewNode Text="VIP II" NavigateUrl="#article" />
+    <TreeViewNode Text="VIP III" NavigateUrl="#article" />
+    <TreeViewNode Text="SignIn/Register" NavigateUrl="#signin" />
+  </TreeViewNode>
+</Nodes>

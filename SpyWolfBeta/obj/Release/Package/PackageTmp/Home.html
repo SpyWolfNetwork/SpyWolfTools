@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0022)https://spywolf.tools/ -->
+<html lang="en-US" class="js-focus-visible" data-js-focus-visible="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/HomeFiles/favicon2.png" rel="shortcut icon" type="image/x-icon">
+    <!-- SEO -->
+    <title>SpyWolf Tools | Coming Soon...</title>
+    <!-- og meta for facebook, googleplus -->
+    <meta property="og:title" content="SpyWolf Tools | Coming Soon...">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://spywolf.tools">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <!-- twitter meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpyWolf Tools | Coming Soon...">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="https://spywolf.tools">
+    <meta name="twitter:image" content="">
+    <link rel="stylesheet" href="./HomeFiles/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./HomeFiles/animate.min.css">
+    <link href="./HomeFiles/all.min.css" rel="stylesheet">
+    <link href="./HomeFiles/css" rel="stylesheet">
+
+    <style>
+        body, input {
+            font-family: 'Montserrat', 'sans-serif';
+            color: #ffffff;
+        }
+
+        .social-list {
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', 'sans-serif';
+        }
+
+        body {
+            font-size: 17px;
+            letter-spacing: 0px;
+            font-weight: 400;
+            ;
+        }
+
+        h1:not(.text-logo), h2, h3, h4, h5, h6, .text-logo-wrapper {
+            font-size: 2.3529411764706em;
+            letter-spacing: 0px;
+            font-weight: 700;
+            font-style: normal;
+            ;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-style: normal;
+            ;
+        }
+    </style>
+
+    <style>
+        .wp-video {
+            margin: 0 auto;
+        }
+
+        .wp-video-shortcode {
+            max-width: 100%;
+        }
+
+        .grecaptcha-badge {
+            display: none !important;
+        }
+
+        .text-logo {
+            display: inline-block;
+        }
+
+        #gdpr-checkbox {
+            -webkit-appearance: checkbox;
+            -moz-appearance: checkbox;
+            width: initial;
+            height: initial;
+        }
+
+        #counter.expired {
+            display: none;
+        }
+
+        input, button {
+            box-shadow: inset 0 0 0 0 !important;
+            -webkit-box-shadow: inset 0 0 0 0 !important;
+            -webkit-appearance: none;
+            outline: none;
+        }
+    </style>
+
+
+    <style type="text/css">
+        @font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-weight: 500;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-weight: 900;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+        }
+    </style>
+</head>
+
+<body id="body" class="loaded">
+    <div id="background-wrapper">
+        <div id="background-image" class="color loaded" style="background-color:#191a1a"></div>
+    </div>
+
+    <section class="section section-body">
+        <p><img class="alignnone size-medium wp-image-6" src="./HomeFiles/dashboard-coming-soon-lowres.png" alt="SpyWolf Tools"></p>
+
+    </section>
+
+    <!-- Fade in background image after load -->
+    <script>
+        window.addEventListener("load",function(event) {
+            init();
+        });
+
+        function init(){
+
+            var image = document.getElementById('background-image');
+            var body = document.getElementById('body');
+
+            if ( image === null ) {
+                image = document.getElementById('body');
+            }
+
+            if ( image != null ) {
+                if ( image.className !== 'image-unsplash') {
+                    image.classList.add('loaded');
+                    body.classList.add('loaded');
+                }
+            }
+
+                    }
+    </script>
+
+    <script>
+        /* Subscribe form script */
+        var ajaxWpUrl = 'https://spywolf.tools/wp-admin/admin-ajax.php';
+        var {pathname} = new URL(ajaxWpUrl);
+        var ajaxurl = `${location.protocol}//${location.hostname}${pathname}`;
+        var security = 'f06765596a';
+        var msg = '';
+        subForm = function( form, resultElement, emailInput, firstnameInput, lastnameInput, token = '' ) {
+            if ( emailInput.value !== '' ) {
+                const firstname = firstnameInput === null ? '' : firstnameInput.value;
+                const lastname = lastnameInput === null ? '' : lastnameInput.value;
+
+                fetch( ajaxurl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                    body: `action=niteo_subscribe&ajax=true&form_honeypot=&email=${ encodeURIComponent(emailInput.value) }&firstname=${ encodeURIComponent(firstname) }&lastname=${ encodeURIComponent(lastname) }&security=${ security }&token=${ token }`,
+                    credentials: 'same-origin'
+                } )
+                .then( (res) => {
+                    return res.json();
+                } )
+                .then( (data) => {
+                    resultElement.innerHTML = data.message; // Display the result inside result element.
+                    form.classList.add('-subscribed');
+                    if (data.status == 1) {
+                        form.classList.remove('-subscribe-failed');
+                        form.classList.add('-subscribe-successful');
+                        emailInput.value = '';
+                        firstnameInput ? firstnameInput.value = '' : null;
+                        lastnameInput ? lastnameInput.value = '' : null;
+
+                    } else {
+                        form.classList.add('-subscribe-failed');
+                    }
+                } )
+                .catch(function(error) { console.log(error.message); });
+
+            } else {
+                resultElement.innerHTML = 'Oops! Email is empty.';
+            }
+        }
+    </script>
+    <!-- Build by Pong D. Panda -->
+
+
+</body>
+<loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container>
+</html>
